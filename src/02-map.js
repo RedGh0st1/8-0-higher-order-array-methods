@@ -46,12 +46,12 @@ function getSongDetails(songs) {
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
 function getTitleAndArtist(songs) {
-  let obj = {}
-  const arrObj = songs.map(({song})=> {
-    return obj[`title`] = song.artist
-    console.log(obj)
+  const arrObj = songs.map((song)=> {
+    let obj = {}
+    obj[song.title] = song.artist
+    return obj
   })
-  return [arrObj]
+  return arrObj
 }
 
 module.exports = {
